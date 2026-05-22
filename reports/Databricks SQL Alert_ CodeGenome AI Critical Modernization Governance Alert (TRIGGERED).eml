@@ -1,0 +1,373 @@
+Received: from BY1PR01MB8921.prod.exchangelabs.com (2603:10b6:a03:5b4::9) by
+ SA7PR01MB994328.prod.exchangelabs.com with HTTPS; Fri, 22 May 2026 00:31:42
+ +0000
+Received: from CH0PR04CA0078.namprd04.prod.outlook.com (2603:10b6:610:74::23)
+ by BY1PR01MB8921.prod.exchangelabs.com (2603:10b6:a03:5b4::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.21.48.17; Fri, 22 May 2026 00:31:39 +0000
+Received: from CH2PEPF0000013C.namprd02.prod.outlook.com
+ (2603:10b6:610:74:cafe::4c) by CH0PR04CA0078.outlook.office365.com
+ (2603:10b6:610:74::23) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.21.48.17 via Frontend Transport; Fri, 22
+ May 2026 00:31:39 +0000
+Received: from esa.hc5997-4.iphmx.com (216.71.143.137) by
+ CH2PEPF0000013C.mail.protection.outlook.com (10.167.244.73) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.21.71.7 via Frontend Transport; Fri, 22 May 2026 00:31:39 +0000
+Received: from a27-242.smtp-out.us-west-2.amazonses.com ([54.240.27.242])
+  by esa3.hc5997-4.iphmx.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384; 21 May 2026 20:31:38 -0400
+From: Databricks <noreply@databricks.com>
+To: "Venkatachalam, Mangayarkarasi" <mangayarkarasi.venkatachalam@dxc.com>
+Subject: Databricks SQL Alert: CodeGenome AI Critical Modernization Governance
+ Alert (TRIGGERED)
+Thread-Topic: Databricks SQL Alert: CodeGenome AI Critical Modernization
+ Governance Alert (TRIGGERED)
+Thread-Index: AQHc6YJchp6YEigSlEaFYC+9PtGA1g==
+Date: Fri, 22 May 2026 00:31:37 +0000
+Message-ID:
+ <0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000@us-west-2.amazonses.com>
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource:
+ CH2PEPF0000013C.namprd02.prod.outlook.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0b9ce7af-f944-48a6-d28e-08deb7997d47
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+received-spf: Pass (esa.hc5997-4.iphmx.com: domain of
+  0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000@ses.databricks.com
+  designates 54.240.27.242 as permitted sender)  identity=mailfrom;
+ client-ip=54.240.27.242;  receiver=esa.hc5997-4.iphmx.com;
+  envelope-from="0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000@ses.databricks.com";
+  x-sender="0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000@ses.databricks.com";
+  x-conformance=spf_only; x-record-type="v=spf1";  x-record-text="v=spf1
+ ip4:199.255.192.0/22  ip4:199.127.232.0/22 ip4:54.240.0.0/18
+ ip4:69.169.224.0/20  ip4:23.249.208.0/20 ip4:23.251.224.0/19
+ ip4:76.223.176.0/20  ip4:54.240.64.0/18 ip4:76.223.128.0/19
+ ip4:216.221.160.0/19  ip4:206.55.144.0/20 ip4:24.110.64.0/18 -all"
+x-ms-exchange-organization-originalclientipaddress: 216.71.143.137
+x-ms-exchange-organization-originalserveripaddress: 10.167.244.73
+x-ms-publictraffictype: Email
+authentication-results: spf=pass (sender IP is 54.240.27.242)
+ smtp.mailfrom=ses.databricks.com; dkim=fail (signature did not verify)
+ header.d=databricks.com;dkim=fail (signature did not verify)
+ header.d=amazonses.com;dmarc=fail action=oreject
+ header.from=databricks.com;compauth=none reason=460
+x-forefront-antispam-report:
+ CIP:216.71.143.137;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:a27-242.smtp-out.us-west-2.amazonses.com;PTR:a27-242.smtp-out.us-west-2.amazonses.com;CAT:NONE;SFS:(13230040)(704161511799003)(3072899012)(7049299003)(3092899012)(3109299003)(2092899012)(5062899012)(7149299003)(82310400026)(69100299015)(12012899012)(13102899012)(13012899012)(32142699015)(55112099003)(18003699003)(6133799003)(11063799006)(4113699003)(16102099003)(56012099003)(4076899003)(19002099003)(8096899003);DIR:INB;
+x-ms-office365-filtering-correlation-id: 0b9ce7af-f944-48a6-d28e-08deb7997d47
+x-microsoft-antispam:
+ BCL:2;ARA:13230040|704161511799003|3072899012|7049299003|3092899012|3109299003|2092899012|5062899012|7149299003|82310400026|69100299015|12012899012|13102899012|13012899012|32142699015|55112099003|18003699003|6133799003|11063799006|4113699003|16102099003|56012099003|4076899003|19002099003|8096899003;
+x-ms-traffictypediagnostic:
+ CH2PEPF0000013C:EE_|BY1PR01MB8921:EE_|SA7PR01MB994328:EE_
+x-ms-exchange-crosstenant-originalarrivaltime: 22 May 2026 00:31:39.0960 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Internet
+x-ms-exchange-crosstenant-id: 93f33571-550f-43cf-b09f-cd331338d086
+x-ms-exchange-transport-crosstenantheadersstamped: BY1PR01MB8921
+x-ms-exchange-crosstenant-network-message-id:
+ 0b9ce7af-f944-48a6-d28e-08deb7997d47
+x-ms-exchange-transport-endtoendlatency: 00:00:03.5009224
+x-ms-exchange-processed-by-bccfoldering: 15.21.0048.002
+x-ms-exchange-crosstenant-authas: Anonymous
+x-ms-exchange-crosstenant-authsource:
+ CH2PEPF0000013C.namprd02.prod.outlook.com
+x-eopattributedmessage: 0
+dkim-signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1779409898;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=kBr/rR29MkxMywZSLQwRlPMSNjQnq3k8QuGcHQDXEbw=;
+	b=4H8Jz/9hyQF2CcJl2HSAfoKrzJLj+FdiMrTdKRejYYxcnw22WBy9VZF38mu6gTQZ
+	b+sheJncr+rL+GbG/UlzYLhL7hy/rJRWykuOQ48zwQ885ZE9LpriSL36Glgol6UzNkL
+	YPCAl1JQxa3CyKEaPlSZu5Dd1B7g7zRjbBSGoipI=
+authentication-results-original: esa.hc5997-4.iphmx.com; spf=Pass
+ smtp.mailfrom=0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000@ses.databricks.com;
+ dkim=pass (signature verified) header.i=@databricks.com; dmarc=pass (p=reject
+ dis=none) d=databricks.com
+ironport-sdr: 6a0fa3ea_uHS+rqwEXE3cG4yMnNhymxtSlh6v1KjXkuBHVFn8fa3I7Xo
+ Q8ij1+jebICoOEG8xY4T6Jh7PJVpx++8zTHcjKw==
+x-eoptenantattributedmessage: 93f33571-550f-43cf-b09f-cd331338d086:0
+X-Microsoft-Antispam-Mailbox-Delivery:
+ ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944490095)(944506478)(944626604)(920097)(930201)(20251009189)(140003)(1420198);
+X-Microsoft-Antispam-Message-Info:
+ =?big5?B?UXJhWnJBcDRQbDBnN3U1S21OU0lxYnJPYk1Gc1QzOVJ4MEtuTERXTWVXVVVVWWdM?=
+ =?big5?B?cm4zZkFGN2xxbmVHeGpWdEI0ZFBrYVljTkNxU3VPMEYzOTllTEhZdWZuRDMyb0t5?=
+ =?big5?B?S1R0Z3UzeHVSeHhzMjhHZ3lDNGhEUVZuTC9lZitRLzY5T255dC85dGJQYnBoQVl6?=
+ =?big5?B?Q0JjS1RrMkd6S2d4MDVHN3Z3bjlyNjNQQ3hGbnpwc0tONVhuUW9najR3UUpPeXJQ?=
+ =?big5?B?Ry9DdGN4UmRRUXExemhOVlVKSW52N0swN2EzQ0hoMDZlaHZEVTVQZG02NVY0Nk9r?=
+ =?big5?B?TitrVmpzUW1OMkhBOVhpbmh3Rk5TYmhQWHExTVFXZnlickxSSWxzK1dVekhxb0dq?=
+ =?big5?B?ZE1udnBiRzRvQWdCZ2tjaUl2QXBDb25ONnRDRjJMTkJYbXFFYnNMWXJGbzhWMmhq?=
+ =?big5?B?dElaamZvZlYrRnZHQmt3TlVpMm8vNi9GdTJWNDhqUjZ3UXBPVXBHWEprbHpvN1RO?=
+ =?big5?B?dFh0K2p1SVdEQ0hPZmRmcFQzUkNMNFRra2FqOGI2Q3lZZFo5ekFCYzdQaGpqQzhy?=
+ =?big5?B?V1d5VU13TVdlMU1SVmZsR2tHN3VqeVhZZUdUS3lpbzZqQkhGYzNCc0NZaFR4cG9C?=
+ =?big5?B?S1B4MERaWEQrSDNRQzFrazFOeURoa3hrQklxQmlRellyc3pjUXVZcUNWODdoVFl2?=
+ =?big5?B?QklLTC8wbTEydE5wNitmZFA3RzlaRVBIN0FvT3lmOHMrOHFKZVhwYzJ5ejc0UlVH?=
+ =?big5?B?RENRVEFTcWZRaHlkcElNZkJZeEF3N3U4aDF4SFZhWVhPblZkc3FmOXpwclhuL0pC?=
+ =?big5?B?NVIvajRYSVhmKzFTakhBUmlUbnY1L2FBcnNXelJmb0RTbDV5NXFMRFhRdVpvczBV?=
+ =?big5?B?aUczMWZjM3MrcVFhc3hwM0dlQUYrMzk2T0pBd0lnUnRYWnBoektpc0NJYUlPaDJy?=
+ =?big5?B?ZDYzTDd5d0FpR0RnaVB0bE9JSXRnM1NKMGRVQ3EzNnVjRVZ5LzU0QWh5QTBLOUc0?=
+ =?big5?B?VEE3OGgxRFZVVlBNTTBaQklWc1NjdzVMa3A1aldidlpKRTZJZnFjSE5PcWdVMEJp?=
+ =?big5?B?UXdFUXhPVE5TOW9LZU4zb2FOeVRsenI2dFFjV0lCRDhsRzI3SU94ekdVb0dCa3Nk?=
+ =?big5?B?d2x1RXR2Z1p4UzBFeGtDY094ZDFMaWpTSDU1T3NVMXRPNTNINGQ3RlhpTkwzOXoy?=
+ =?big5?B?NFdlSklrcGVFQnFUVERodjdGNzRXSmY2OEJsR0tWS013TEpzbitsb2pCb3pRUzZO?=
+ =?big5?B?VGs4Yy95b1BIZ0pMSmdTVXVIdXpMNFZhWkNyK3BlZEVoaXV5Y1NFSE5ZOFl4U01V?=
+ =?big5?B?Q1hIMnhib3g4azZ0czBqdkJHZGtiR1lRSFEyKzhsQXdOQ1BKUkxCNFdYcDdITlc4?=
+ =?big5?B?aTFnVUhqbXFvVU5IbGtCMjNqdTVXak40VjZXNDd5VzZTY0RWUUtTWEF0V2lUMTNH?=
+ =?big5?B?clNBcDFwS3k3VHRXR0VhYnA0VzgrR0N5R3pNRDlDaGRCdGV6MmtqZ2Fwb3JBSWVL?=
+ =?big5?B?SXRwV2pWbUdjYjlZdEdZcUcyOG1BK2NpWE9XTitZNENSWW5ZNGIxV1Zvc1kwZnRD?=
+ =?big5?B?aVVhTFFJUkNXMk13eVhPMmgzQ3F2b1JJOVBSdnd1b3h3dmptZlhGQkduQ1BSeVNB?=
+ =?big5?B?U3FNMWFaM0hWV3BCd0huYXFUUC8vVHYrRWVsRE9Oc0FUMDdRbU5SSllKa29neTdi?=
+ =?big5?B?WUxxd00rbEY2Ym5hSXRFUFdxaiszNUhPNG1OYjZPWC9WeVJ1azIvT2dweE9yWWhj?=
+ =?big5?B?eTU5SkhkUms4T25BVFhRblBkWDBjQXZJTVhrc2ZsSXlId0RvTDdWRUhSVllxd2U2?=
+ =?big5?B?eW45Mml3WElIa29ubmhvYnNBa3h4Qi9Rajl6c2JnN3J2QXVHekZNQ3FPZWtCTVdx?=
+ =?big5?B?Tk9iaFRaTjNTdGFGbHJKM0c2QS9sZXIyN1R3RlZocjlQRjdYOExnM2RqUldmSFpK?=
+ =?big5?B?QW1uNVNFY1V3ekRtbTFUYVhxanppZllzRnBDM29BMURhMm5IVW1xRGJhLzI0UjhR?=
+ =?big5?B?US9iRWZtSXRrZDI0bys4UlNCdGt3UkNJNlU0ZHRCRUtYQUlzK1RmN2NsdXhMTXNT?=
+ =?big5?B?K0xvRC93L1crSWt3MnlGL21nSi9oQXg2TTN2YXYyenNseElUL2tYbmFpWm5KeVRr?=
+ =?big5?B?ejB3WmNFVE5iaHN4N3h4YjVacVFaRTlaYTNyUm4yZWw5TnpDSlV0TGdxNmtoMG4z?=
+ =?big5?B?ZWIzMUhpaEc2bnpuRkJuM2Y0MW1TM29UZzlnSStOZHdUY0lLRG5EOFlDbzN3clRl?=
+ =?big5?B?UURROFZmYm5NbVNFV3EwcXFtUTdzU1A0WUxhdGMxODljQ3MxWTlpeUlUN1ZpUHNF?=
+ =?big5?B?S0lNMnhLcHVZcUV4TmVTVXh0Z0ZUK09NZ1NPRjJqQlN3Z3RqTG5wVkF0L1haSFJU?=
+ =?big5?B?UEFacjE1cVZhaWdvcHRiREN0YkRLbXZKR1lEWnVGM0NzTHVDbVhpQldvSWovekdP?=
+ =?big5?B?RWxrS3BqQlg2ZnFVSkluZTJGNDFIcTM3Qy9vY2NzWVh4VTArallUanpYemZPTFkw?=
+ =?big5?B?a0JoM0NQelpYRnk3Mjg0YjFxb1I3aGp2WGdpVXlaZ3N6KzJlRHNVczhUeVN1Tk43?=
+ =?big5?B?Z2c5NUphdm1lWTc4SkVzdnRjY29BU3ZxNVJGNkQ0OWpGRlVNak5ld3FXSTlpS1NG?=
+ =?big5?B?NlN2VkpMTkRENDMvTXp5RFV5QWRSajROeEY1RVlVeE1WQUdYa2xuRFRKNHBoWFhS?=
+ =?big5?B?a0E4UVU3d1hkbERvMWwyUExFOWdqTUVSbXE1SDc5SW9yNXNtMC9zVEx0QkpXRzdP?=
+ =?big5?B?L1BwM2JsSHd2Q20wUHQ5THF0MS84T1BCYksySGQvUkt0NmpEUTNYR1ZncHpydTh3?=
+ =?big5?B?eUpjVDJCbjRQVHNiRU4xVHg2cDFNVmV3MUtoYTJacGN1bjFFSzNJNys0MjN2Yk1L?=
+ =?big5?B?RDh6a1ozYTJQUTQzaEw2WXVqVU14S3FLdkNKTmdFa20xTXJqSmJNQnoyaXJ3T0RV?=
+ =?big5?B?UkJaWFhRdTJEVEpMTFQxNGlFZTRkRGc1d25RTC9xcWdyU2VhNXh1ZFM0RjlYVnhk?=
+ =?big5?B?dkxRLzdJbm1mSnllNHdZYUZ6L2dNSEYzM3owTUE1YURxZjBBSGJ0YTlPcFg2czEw?=
+ =?big5?B?Z0JXbkVydDcyVS9CazBOWHhkWjJ2VWUxTkp6Z1A0OTVQZktDUjgwNGkzRDVlVVB0?=
+ =?big5?B?aFQ1aGZnZzBvZGVGRFFUbXJhS205eE9JYjYxSWhFMmFPL2JpUFJPUGVEQTdQQkxF?=
+ =?big5?B?VCtxTngzNUovam40NEQ3YmloQVdXSXpoZUtnK0tsSU0zcHlyUncva1JUbUJzUDJ2?=
+ =?big5?B?S3RQM2NkUm1nd2oyeEROQUlzYUh3SWlnanZBcFhtWnFqR1FlNGVUMFFMZWJabk5D?=
+ =?big5?B?alcycHBzVTRLOEFkUXVtcGNsU2MvbEw4ZVZyS0huSFBqdXprNXdpd3l5WnNTd2Ux?=
+ =?big5?B?MnB3VUNKTzc1clNxQjhKdWk2TFpHU1hxQjY2UHErc2FiZ1Nna2hqVHIrbll4cStW?=
+ =?big5?B?d2U2anhzVk5oaVJiandoY0luQUlhOUMvejFJQStpNExhUDR2cUJta0VoOXFxUkNB?=
+ =?big5?B?dGdIZmI0ejhuNWVqWlY2Y1hudXNjeGUzZTRsSFdGVTI0bjdOc3lkYUl1QURuS3hn?=
+ =?big5?B?MXNoTDFjdVAxK2lQMk01SGVYcVNGdUd5Mmo2dENkeDdjQzB5ck50Y0NLOGR1WDZk?=
+ =?big5?Q?S7Y8Ah9/odw=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_0101019e4d18498d85e75c47b16e4d61af2e37f213dcae77000000u_"
+MIME-Version: 1.0
+
+--_000_0101019e4d18498d85e75c47b16e4d61af2e37f213dcae77000000u_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+Q29kZUdlbm9tZSBBSSBDcml0aWNhbCBNb2Rlcm5pemF0aW9uIEdvdmVybmFuY2UgQWxlcnQgVFJJ
+R0dFUkVEIKFYIHZpZXcgY29uZGl0aW9uIGFuZCByZWNlbnQgcnVucy4NCltkYXRhYnJpY2tzXQ0K
+Q29kZUdlbm9tZSBBSSBDcml0aWNhbCBNb2Rlcm5pemF0aW9uIEdvdmVybmFuY2UgQWxlcnQgd2Fz
+IFRSSUdHRVJFRA0KRXZhbHVhdGlvbiAgICAgIFRSSUdHRVJFRA0KRklSU1QgUk9XKGFsZXJ0X2Nv
+dW50KTIuMCA+IHN0YXRpYyB2YWx1ZTAuMA0KUnVuIGF0ICAyMDI2LTA1LTIyIDA2OjAxIElTVA0K
+TGFzdCA1IHJ1bnMNClZpZXcgbW9yZSBoaXN0b3J5PGh0dHBzOi8vbmFtMTIuc2FmZWxpbmtzLnBy
+b3RlY3Rpb24ub3V0bG9vay5jb20vP3VybD1odHRwcyUzQSUyRiUyRmxpbmsuY2xvdWQuZGF0YWJy
+aWNrcy5jb20lMkZDTDAlMkZodHRwcyUzQSUyNTJGJTI1MkZkYmMtYTM5YjIzYzUtZTFmNi5jbG91
+ZC5kYXRhYnJpY2tzLmNvbSUyNTJGc3FsJTI1MkZhbGVydHMtdjIlMjUyRjU0YzM1NjYwLWQxNDUt
+NDY4ZS1iNmI2LWU5MDgzMDAxYjAxNSUyNTNGbyUzRDE5MDQ2MzU4NjI2MzYzNjIlMkYxJTJGMDEw
+MTAxOWU0ZDE4NDk4ZC04NWU3NWM0Ny1iMTZlLTRkNjEtYWYyZS0zN2YyMTNkY2FlNzctMDAwMDAw
+JTJGWjZFU1ZZSXFNOFBkTFBaLVpZWUxDRTA2MjdKaXB0RHRPVDdaVkNtQVF4dyUzRDQ1MiZkYXRh
+PTA1JTdDMDIlN0NtYW5nYXlhcmthcmFzaS52ZW5rYXRhY2hhbGFtJTQwZHhjLmNvbSU3QzBiOWNl
+N2FmZjk0NDQ4YTZkMjhlMDhkZWI3OTk3ZDQ3JTdDOTNmMzM1NzE1NTBmNDNjZmIwOWZjZDMzMTMz
+OGQwODYlN0MwJTdDMCU3QzYzOTE1MDA2NzAyNzIxMTk3MyU3Q1Vua25vd24lN0NUV0ZwYkdac2Iz
+ZDhleUpGYlhCMGVVMWhjR2tpT25SeWRXVXNJbFlpT2lJd0xqQXVNREF3TUNJc0lsQWlPaUpYYVc0
+ek1pSXNJa0ZPSWpvaVRXRnBiQ0lzSWxkVUlqb3lmUSUzRCUzRCU3QzAlN0MlN0MlN0Mmc2RhdGE9
+cGZrWVQ0Rm5JTVF1bkVBaWZIVnc0S0NxekNwaElqMEM1NEdhd1p2WEl6dyUzRCZyZXNlcnZlZD0w
+Pg0KofkgVmlldyBhbGVydCBpbiBEYXRhYnJpY2tzIDxodHRwczovL25hbTEyLnNhZmVsaW5rcy5w
+cm90ZWN0aW9uLm91dGxvb2suY29tLz91cmw9aHR0cHMlM0ElMkYlMkZsaW5rLmNsb3VkLmRhdGFi
+cmlja3MuY29tJTJGQ0wwJTJGaHR0cHMlM0ElMjUyRiUyNTJGZGJjLWEzOWIyM2M1LWUxZjYuY2xv
+dWQuZGF0YWJyaWNrcy5jb20lMjUyRnNxbCUyNTJGYWxlcnRzLXYyJTI1MkY1NGMzNTY2MC1kMTQ1
+LTQ2OGUtYjZiNi1lOTA4MzAwMWIwMTUlMjUyRmV2YWx1YXRpb25zJTI1MkY5NTUxMzU5MjUxOTI0
+NjklMjUzRm8lM0QxOTA0NjM1ODYyNjM2MzYyJTJGMSUyRjAxMDEwMTllNGQxODQ5OGQtODVlNzVj
+NDctYjE2ZS00ZDYxLWFmMmUtMzdmMjEzZGNhZTc3LTAwMDAwMCUyRkxKUVlENzhIRGMyQjBCRWpM
+Xy1SZnhSLVhkOGxvdG9zMVl4THVZVXJnbHMlM0Q0NTImZGF0YT0wNSU3QzAyJTdDbWFuZ2F5YXJr
+YXJhc2kudmVua2F0YWNoYWxhbSU0MGR4Yy5jb20lN0MwYjljZTdhZmY5NDQ0OGE2ZDI4ZTA4ZGVi
+Nzk5N2Q0NyU3QzkzZjMzNTcxNTUwZjQzY2ZiMDlmY2QzMzEzMzhkMDg2JTdDMCU3QzAlN0M2Mzkx
+NTAwNjcwMjcyMzYwMzAlN0NVbmtub3duJTdDVFdGcGJHWnNiM2Q4ZXlKRmJYQjBlVTFoY0draU9u
+UnlkV1VzSWxZaU9pSXdMakF1TURBd01DSXNJbEFpT2lKWGFXNHpNaUlzSWtGT0lqb2lUV0ZwYkNJ
+c0lsZFVJam95ZlElM0QlM0QlN0MwJTdDJTdDJTdDJnNkYXRhPXU1a0JGSkU4b2lpUlo0UW5KalU2
+Vk1XcDdOYXBwMzdpRlhna1Q4RFYyakUlM0QmcmVzZXJ2ZWQ9MD4NCltodHRwczovL2xpbmsuY2xv
+dWQuZGF0YWJyaWNrcy5jb20vQ0kwLzAxMDEwMTllNGQxODQ5OGQtODVlNzVjNDctYjE2ZS00ZDYx
+LWFmMmUtMzdmMjEzZGNhZTc3LTAwMDAwMC9EV3YzZllVbTRQZl9iWGdWejJ3aDM3YW5rYUgwa3VZ
+ajRMUURsbVc4Wm5RPTQ1Ml0NCg==
+
+--_000_0101019e4d18498d85e75c47b16e4d61af2e37f213dcae77000000u_
+Content-Type: text/html; charset="big5"
+Content-ID: <9549FBD217920149AA377386070A7ADB@prod.exchangelabs.com>
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<title>CodeGenome AI Critical Modernization Governance Alert (TRIGGERED)</t=
+itle>
+</head>
+<body style=3D"margin:0;padding:0;background:#f3f4f6;">
+<!-- Preheader -->
+<div style=3D"display:none;max-height:0;overflow:hidden;opacity:0;color:tra=
+nsparent;">
+CodeGenome AI Critical Modernization Governance Alert TRIGGERED =A1X view c=
+ondition and recent runs.
+</div>
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;background:#f3f4f6;">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding:20px 12px;"><!-- Card -->
+<table role=3D"presentation" width=3D"740" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"border-collapse:separate;border-spacing:0;background:#ffffff;b=
+order:1px solid #e5e7eb;border-radius:8px;overflow:hidden;
+                      font-family:-apple-system,BlinkMacSystemFont,'Segoe U=
+I',Roboto,Arial,sans-serif;">
+<!-- Logo -->
+<tbody>
+<tr>
+<td style=3D"padding:18px 22px;"><img src=3D"https://databricks.com/wp-cont=
+ent/themes/databricks/assets/images/header_logo_2x.png" alt=3D"databricks" =
+width=3D"256" style=3D"max-width:256px;width:256px;height:auto;display:bloc=
+k;">
+</td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style=3D"border-top:1px solid #eef2f7;"></td>
+</tr>
+<!-- Title row -->
+<tr>
+<td style=3D"padding:18px 22px 6px 22px;text-align:left;color:#111827;font-=
+size:18px;line-height:24px;">
+<strong>CodeGenome AI Critical Modernization Governance Alert</strong> was =
+TRIGGERED
+</td>
+</tr>
+<tr>
+<td style=3D"padding:0 22px 10px 22px;"></td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style=3D"border-top:1px solid #eef2f7;"></td>
+</tr>
+<!-- Body -->
+<tr>
+<td style=3D"padding:14px 22px 18px 22px;">
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;font-size:14px;line-height:20px;co=
+lor:#111827;">
+<tbody>
+<tr>
+<td width=3D"140" valign=3D"top" style=3D"padding:12px 0;color:#111827;font=
+-weight:700;">
+Evaluation</td>
+<td valign=3D"top" style=3D"padding:12px 0;"><span style=3D"display:inline-=
+block;vertical-align:middle;margin-right:10px;"><span style=3D"display:inli=
+ne-block;min-width:80px;text-align:center;background:rgba(255, 191, 1, 0.18=
+);color:#4F3422;padding:2px 8px;border-radius:4px;font-size:11px;font-weigh=
+t:600;">TRIGGERED</span></span>
+<div style=3D"display:block;margin-top:10px;line-height:normal;"><span styl=
+e=3D"background:#f3f4f6;color:#374151;padding:2px 8px;border-radius:4px 0 0=
+ 4px;font-size:13px;display:inline-block;">FIRST ROW(alert_count)</span><sp=
+an style=3D"background:#ffffff;color:#374151;padding:2px 8px;border-radius:=
+0 4px 4px 0;border:1px solid #e5e7eb;font-size:13px;display:inline-block;">=
+2.0</span>
+<span style=3D"padding:0 4px;font-size:13px;color:#111827;font-weight:500;"=
+>&gt;</span>
+<span style=3D"background:#f3f4f6;color:#374151;padding:2px 8px;border-radi=
+us:4px 0 0 4px;font-size:13px;display:inline-block;">
+static value</span><span style=3D"background:#ffffff;color:#374151;padding:=
+2px 8px;border-radius:0 4px 4px 0;border:1px solid #e5e7eb;font-size:13px;d=
+isplay:inline-block;">0.0</span></div>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" style=3D"border-top:1px solid #eef2f7;"></td>
+</tr>
+<tr>
+<td width=3D"140" valign=3D"top" style=3D"padding:12px 0;color:#111827;font=
+-weight:700;">
+Run at</td>
+<td valign=3D"top" style=3D"padding:12px 0;color:#111827;">2026-05-22 06:01=
+ IST</td>
+</tr>
+<tr>
+<td colspan=3D"2" style=3D"border-top:1px solid #eef2f7;"></td>
+</tr>
+<tr>
+<td width=3D"140" valign=3D"top" style=3D"padding:12px 0;color:#111827;font=
+-weight:700;">
+Last 5 runs</td>
+<td valign=3D"top" style=3D"padding:12px 0;">
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" style=3D"b=
+order-collapse:collapse;">
+</table>
+<div style=3D"margin-top:6px;"><a href=3D"https://nam12.safelinks.protectio=
+n.outlook.com/?url=3Dhttps%3A%2F%2Flink.cloud.databricks.com%2FCL0%2Fhttps%=
+3A%252F%252Fdbc-a39b23c5-e1f6.cloud.databricks.com%252Fsql%252Falerts-v2%25=
+2F54c35660-d145-468e-b6b6-e9083001b015%253Fo%3D1904635862636362%2F1%2F01010=
+19e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000%2FZ6ESVYIqM8PdLPZ-Z=
+YYLCE0627JiptDtOT7ZVCmAQxw%3D452&amp;data=3D05%7C02%7Cmangayarkarasi.venkat=
+achalam%40dxc.com%7C0b9ce7aff94448a6d28e08deb7997d47%7C93f33571550f43cfb09f=
+cd331338d086%7C0%7C0%7C639150067027211973%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0e=
+U1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoy=
+fQ%3D%3D%7C0%7C%7C%7C&amp;sdata=3DpfkYT4FnIMQunEAifHVw4KCqzCphIj0C54GawZvXI=
+zw%3D&amp;reserved=3D0" originalsrc=3D"https://link.cloud.databricks.com/CL=
+0/https:%2F%2Fdbc-a39b23c5-e1f6.cloud.databricks.com%2Fsql%2Falerts-v2%2F54=
+c35660-d145-468e-b6b6-e9083001b015%3Fo=3D1904635862636362/1/0101019e4d18498=
+d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000/Z6ESVYIqM8PdLPZ-ZYYLCE0627Jip=
+tDtOT7ZVCmAQxw=3D452" style=3D"color:#2563eb;text-decoration:none;font-weig=
+ht:700;">View
+ more history</a> </div>
+</td>
+</tr>
+</tbody>
+</table>
+<div style=3D"height:18px;"></div>
+<!-- View alert button -->
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" style=3D"b=
+order-collapse:collapse;">
+<tbody>
+<tr>
+<td><a href=3D"https://nam12.safelinks.protection.outlook.com/?url=3Dhttps%=
+3A%2F%2Flink.cloud.databricks.com%2FCL0%2Fhttps%3A%252F%252Fdbc-a39b23c5-e1=
+f6.cloud.databricks.com%252Fsql%252Falerts-v2%252F54c35660-d145-468e-b6b6-e=
+9083001b015%252Fevaluations%252F955135925192469%253Fo%3D1904635862636362%2F=
+1%2F0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dcae77-000000%2FLJQYD78H=
+Dc2B0BEjL_-RfxR-Xd8lotos1YxLuYUrgls%3D452&amp;data=3D05%7C02%7Cmangayarkara=
+si.venkatachalam%40dxc.com%7C0b9ce7aff94448a6d28e08deb7997d47%7C93f33571550=
+f43cfb09fcd331338d086%7C0%7C0%7C639150067027236030%7CUnknown%7CTWFpbGZsb3d8=
+eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCI=
+sIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=3Du5kBFJE8oiiRZ4QnJjU6VMWp7Napp37i=
+FXgkT8DV2jE%3D&amp;reserved=3D0" originalsrc=3D"https://link.cloud.databric=
+ks.com/CL0/https:%2F%2Fdbc-a39b23c5-e1f6.cloud.databricks.com%2Fsql%2Falert=
+s-v2%2F54c35660-d145-468e-b6b6-e9083001b015%2Fevaluations%2F955135925192469=
+%3Fo=3D1904635862636362/1/0101019e4d18498d-85e75c47-b16e-4d61-af2e-37f213dc=
+ae77-000000/LJQYD78HDc2B0BEjL_-RfxR-Xd8lotos1YxLuYUrgls=3D452" style=3D"dis=
+play:inline-block;background:#1f6feb;color:#ffffff;text-decoration:none;fon=
+t-weight:700;
+                              padding:11px 16px;border-radius:6px;font-size=
+:14px;"><span style=3D"display:inline-block;vertical-align:middle;margin-ri=
+ght:8px;font-size:16px;line-height:1;" aria-hidden=3D"true">=A1=F9</span>
+ View alert in Databricks </a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img alt=3D"" src=3D"https://link.cloud.databricks.com/CI0/0101019e4d18498d=
+-85e75c47-b16e-4d61-af2e-37f213dcae77-000000/DWv3fYUm4Pf_bXgVz2wh37ankaH0ku=
+Yj4LQDlmW8ZnQ=3D452" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+
+--_000_0101019e4d18498d85e75c47b16e4d61af2e37f213dcae77000000u_--
