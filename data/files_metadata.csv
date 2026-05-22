@@ -1,0 +1,315 @@
+file_name,file_path,file_type,content
+ACCOUNT.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/ACCOUNT.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. ACCOUNT.
+DISPLAY 'ACCOUNT PROCESSING'."
+ACCTOPEN.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/ACCTOPEN.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. ACCTOPEN.
+PROCEDURE DIVISION.
+    DISPLAY 'ACCOUNT OPENING PROCESS'.
+    CALL 'KYCVALID'.
+    CALL 'AMLCHK'.
+    STOP RUN."
+AUTHCTRL.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/AUTHCTRL.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. AUTHCTRL.
+PROCEDURE DIVISION.
+    DISPLAY 'AUTHORIZATION CONTROL'.
+    STOP RUN."
+BANKREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/BANKREC.cpy,CPY,"01 BANK-RECORD.
+   05 ACCOUNT-NO PIC X(10).
+   05 CUSTOMER-ID PIC X(10)."
+CLAIMPAY.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CLAIMPAY.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. CLAIMPAY.
+PROCEDURE DIVISION.
+    DISPLAY 'CLAIM PAYMENT PROCESSING'.
+    STOP RUN."
+CLAIMREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CLAIMREC.cpy,CPY,"01 CLAIM-RECORD.
+   05 CLAIM-ID PIC X(15).
+   05 CLAIM-AMOUNT PIC 9(9)V99."
+CLAIMS.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CLAIMS.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. CLAIMS.
+DISPLAY 'CLAIMS VALIDATION'."
+CLAIMS_HISTORY.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CLAIMS_HISTORY.sql,SQL,"CREATE TABLE CLAIMS_HISTORY (
+    CLAIM_ID VARCHAR(20),
+    CLAIM_STATUS VARCHAR(20)
+);"
+CUSTOMER.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CUSTOMER.cbl,CBL,"IDENTIFICATION DIVISION.
+       PROGRAM-ID. CUSTOMER.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT CUST-IN-FILE ASSIGN TO 'CUSTOMER.INPUT.FILE'.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD CUST-IN-FILE.
+       01 CUSTOMER-INPUT-RECORD.
+          05 IN-CUSTOMER-ID       PIC 9(5).
+
+       WORKING-STORAGE SECTION.
+       01 WS-CUSTOMER-ID          PIC 9(5).
+       01 WS-CUSTOMER-NAME        PIC X(30).
+       01 WS-CUSTOMER-STATUS      PIC X(10).
+       01 WS-CREDIT-LIMIT         PIC 9(7).
+       01 WS-RISK-CATEGORY        PIC X(10).
+
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           DISPLAY 'CUSTOMER SEARCH STARTED'.
+
+           OPEN INPUT CUST-IN-FILE.
+           READ CUST-IN-FILE
+               AT END DISPLAY 'NO CUSTOMER INPUT FOUND'
+           END-READ.
+
+           MOVE IN-CUSTOMER-ID TO WS-CUSTOMER-ID.
+
+           EXEC SQL
+               SELECT CUSTOMER_NAME, CUSTOMER_STATUS, CREDIT_LIMIT
+               INTO :WS-CUSTOMER-NAME, :WS-CUSTOMER-STATUS, :WS-CREDIT-LIMIT
+               FROM CUSTOMER_MASTER
+               WHERE CUSTOMER_ID = :WS-CUSTOMER-ID
+           END-EXEC.
+
+           IF WS-CREDIT-LIMIT > 100000
+               MOVE 'HIGH' TO WS-RISK-CATEGORY
+           ELSE
+               MOVE 'NORMAL' TO WS-RISK-CATEGORY
+           END-IF.
+
+           EXEC SQL
+               UPDATE CUSTOMER_MASTER
+               SET RISK_CATEGORY = :WS-RISK-CATEGORY
+               WHERE CUSTOMER_ID = :WS-CUSTOMER-ID
+           END-EXEC.
+
+           CALL 'CUSTAUDIT' USING WS-CUSTOMER-ID WS-RISK-CATEGORY.
+
+           DISPLAY WS-CUSTOMER-NAME.
+           DISPLAY WS-RISK-CATEGORY.
+
+           CLOSE CUST-IN-FILE.
+           STOP RUN."
+CUSTOMER_DB2.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CUSTOMER_DB2.sql,SQL,CREATE TABLE CUSTOMER_MASTER (CUSTOMER_ID VARCHAR(10));
+CUSTOMER_MIGRATION.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CUSTOMER_MIGRATION.sql,SQL,"CREATE TABLE CUSTOMER_MASTER (
+    CUSTOMER_ID VARCHAR(20),
+    CUSTOMER_NAME VARCHAR(100)
+);"
+CUSTREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/CUSTREC.cpy,CPY,"01 CUSTOMER-RECORD.
+05 CUSTOMER-ID PIC X(10)."
+DAILYBATCH.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/DAILYBATCH.jcl,JCL,"//DAILYBAT JOB (BATCH),'DAILY BATCH'"
+EMPREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/EMPREC.cpy,CPY,"01 EMPLOYEE-RECORD.
+          05 EMPLOYEE-ID              PIC 9(5).
+          05 EMPLOYEE-NAME            PIC X(30).
+          05 EMPLOYEE-DEPARTMENT      PIC X(20).
+          05 EMPLOYEE-SALARY          PIC 9(7).
+          05 EMPLOYEE-GRADE           PIC X(2).
+          05 EMPLOYEE-STATUS          PIC X(10).
+          05 EMPLOYEE-JOIN-DATE.
+             10 JOIN-YEAR             PIC 9(4).
+             10 JOIN-MONTH            PIC 9(2).
+             10 JOIN-DAY              PIC 9(2).
+          05 EMPLOYEE-BANK-DETAILS.
+             10 BANK-ID               PIC X(10).
+             10 ACCOUNT-NUMBER        PIC X(18).
+          05 EMPLOYEE-TAX-DETAILS.
+             10 TAX-CODE              PIC X(5).
+             10 TAX-AMOUNT            PIC 9(5).
+             10 NET-SALARY            PIC 9(7)."
+ERRHANDL.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/ERRHANDL.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. ERRHANDL.
+PROCEDURE DIVISION.
+    DISPLAY 'RETRY LOGIC'.
+    STOP RUN."
+FRAUDCHK.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/FRAUDCHK.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. FRAUDCHK.
+PROCEDURE DIVISION.
+    DISPLAY 'FRAUD CHECK'.
+    STOP RUN."
+FUNDSXFER.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/FUNDSXFER.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. FUNDSXFER.
+PROCEDURE DIVISION.
+    EXEC SQL
+        UPDATE ACCOUNT_MASTER
+        SET BALANCE = BALANCE - 100
+    END-EXEC.
+    CALL 'FRAUDCHK'.
+    STOP RUN."
+INTCALC.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/INTCALC.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. INTCALC.
+PROCEDURE DIVISION.
+    COMPUTE INTEREST = PRINCIPAL * RATE / 100.
+    STOP RUN."
+JOB001.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/JOB001.jcl,JCL,"//JOB001   JOB (ACCT),'CODEGENOME DAILY BATCH',CLASS=A,MSGCLASS=X,
+//             NOTIFY=&SYSUID
+//*
+//* STEP 1: SORT EMPLOYEE INPUT FILE
+//*
+//SORTSTEP EXEC PGM=SORT
+//SORTIN   DD DSN=EMP.RAW.INPUT.FILE,DISP=SHR
+//SORTOUT  DD DSN=EMP.INPUT.FILE,DISP=(NEW,CATLG,DELETE)
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+  SORT FIELDS=(1,5,CH,A)
+/*
+//*
+//* STEP 2: EXECUTE PAYROLL PROGRAM
+//*
+//PAYSTEP  EXEC PGM=PAYROLL
+//STEPLIB  DD DSN=PAYROLL.LOADLIB,DISP=SHR
+//EMPIN    DD DSN=EMP.INPUT.FILE,DISP=SHR
+//PAYOUT   DD DSN=EMP.OUTPUT.FILE,DISP=(NEW,CATLG,DELETE)
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD DUMMY
+//*
+//* STEP 3: EXECUTE CUSTOMER RISK PROGRAM
+//*
+//CUSTSTEP EXEC PGM=CUSTOMER
+//STEPLIB  DD DSN=CUSTOMER.LOADLIB,DISP=SHR
+//CUSTIN   DD DSN=CUSTOMER.INPUT.FILE,DISP=SHR
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD DUMMY
+//*
+//* STEP 4: GENERATE DAILY REPORT
+//*
+//RPTSTEP  EXEC PGM=REPORTGEN
+//REPORTIN DD DSN=EMP.OUTPUT.FILE,DISP=SHR
+//REPORT   DD DSN=PAYROLL.DAILY.REPORT,DISP=(NEW,CATLG,DELETE)
+//SYSOUT   DD SYSOUT=*"
+MONTHEND.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/MONTHEND.jcl,JCL,"//MONTHEND JOB (FIN),'MONTH END'
+//STEP01 EXEC PGM=INTCALC
+//STEP02 EXEC PGM=PREMIUM"
+MONTHEND_RECON.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/MONTHEND_RECON.sql,SQL,SELECT * FROM PAYMENT_AUDIT;
+NIGHTLY.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/NIGHTLY.jcl,JCL,"//NIGHTLY JOB (ACCT),'NIGHT BATCH'
+//STEP01 EXEC PGM=ACCTOPEN
+//STEP02 EXEC PGM=FUNDSXFER
+//STEP03 EXEC PGM=RECON"
+ORDPROC.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/ORDPROC.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. ORDPROC.
+PROCEDURE DIVISION.
+    DISPLAY 'ORDER PROCESSING'.
+    STOP RUN."
+PATIENT.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PATIENT.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. PATIENT.
+PROCEDURE DIVISION.
+    DISPLAY 'PATIENT REGISTRATION'.
+    STOP RUN."
+PAYJOB.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PAYJOB.jcl,JCL,"//PAYJOB JOB (ACCT),'PAYROLL JOB'"
+PAYMENT_AUDIT.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PAYMENT_AUDIT.sql,SQL,"CREATE TABLE PAYMENT_AUDIT (
+    PAYMENT_ID VARCHAR(20),
+    STATUS VARCHAR(20)
+);"
+PAYREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PAYREC.cpy,CPY,"01 PAYROLL-RECORD.
+05 EMP-ID PIC X(08)."
+PAYROLL.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PAYROLL.cbl,CBL,"IDENTIFICATION DIVISION.
+       PROGRAM-ID. PAYROLL.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT EMP-IN-FILE ASSIGN TO 'EMP.INPUT.FILE'.
+           SELECT PAY-OUT-FILE ASSIGN TO 'EMP.OUTPUT.FILE'.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD EMP-IN-FILE.
+       COPY EMPREC.
+
+       FD PAY-OUT-FILE.
+       01 PAYROLL-OUTPUT-RECORD.
+          05 OUT-EMP-ID       PIC 9(5).
+          05 OUT-TAX-AMOUNT   PIC 9(5).
+          05 OUT-NET-SALARY   PIC 9(7).
+
+       WORKING-STORAGE SECTION.
+       01 WS-EMP-ID           PIC 9(5).
+       01 WS-EMP-SALARY       PIC 9(7).
+       01 WS-TAX-AMOUNT       PIC 9(5).
+       01 WS-NET-SALARY       PIC 9(7).
+       01 WS-PAYROLL-STATUS   PIC X(10).
+
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           DISPLAY 'PAYROLL PROCESS STARTED'.
+
+           OPEN INPUT EMP-IN-FILE.
+           OPEN OUTPUT PAY-OUT-FILE.
+
+           CALL 'EMPREAD' USING WS-EMP-ID WS-EMP-SALARY.
+           CALL 'TAXCALC' USING WS-EMP-SALARY WS-TAX-AMOUNT.
+
+           IF WS-EMP-SALARY > 50000
+               MOVE 5000 TO WS-TAX-AMOUNT
+               MOVE 'HIGH-TAX' TO WS-PAYROLL-STATUS
+           ELSE
+               MOVE 2000 TO WS-TAX-AMOUNT
+               MOVE 'STD-TAX' TO WS-PAYROLL-STATUS
+           END-IF.
+
+           COMPUTE WS-NET-SALARY = WS-EMP-SALARY - WS-TAX-AMOUNT.
+
+           EXEC SQL
+               SELECT EMPLOYEE_ID, EMPLOYEE_SALARY
+               INTO :WS-EMP-ID, :WS-EMP-SALARY
+               FROM EMP_MASTER
+               WHERE EMPLOYEE_ID = :WS-EMP-ID
+           END-EXEC.
+
+           EXEC SQL
+               UPDATE EMP_MASTER
+               SET TAX_AMOUNT = :WS-TAX-AMOUNT,
+                   NET_SALARY = :WS-NET-SALARY,
+                   PAYROLL_STATUS = :WS-PAYROLL-STATUS
+               WHERE EMPLOYEE_ID = :WS-EMP-ID
+           END-EXEC.
+
+           EXEC SQL
+               INSERT INTO PAYROLL_AUDIT
+               (EMPLOYEE_ID, TAX_AMOUNT, NET_SALARY, STATUS)
+               VALUES (:WS-EMP-ID, :WS-TAX-AMOUNT, :WS-NET-SALARY, :WS-PAYROLL-STATUS)
+           END-EXEC.
+
+           MOVE WS-EMP-ID TO OUT-EMP-ID.
+           MOVE WS-TAX-AMOUNT TO OUT-TAX-AMOUNT.
+           MOVE WS-NET-SALARY TO OUT-NET-SALARY.
+           WRITE PAYROLL-OUTPUT-RECORD.
+
+           CLOSE EMP-IN-FILE.
+           CLOSE PAY-OUT-FILE.
+
+           DISPLAY 'PAYROLL PROCESS COMPLETED'.
+           STOP RUN."
+PAYROLL_DB2.sql,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PAYROLL_DB2.sql,SQL,CREATE TABLE EMP_PAYROLL (EMP_ID VARCHAR(8));
+POLICY.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/POLICY.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. POLICY.
+DISPLAY 'POLICY CHECK'."
+POLRENEW.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/POLRENEW.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. POLRENEW.
+PROCEDURE DIVISION.
+    DISPLAY 'POLICY RENEWAL PROCESS'.
+    STOP RUN."
+PREMIUM.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/PREMIUM.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. PREMIUM.
+PROCEDURE DIVISION.
+    DISPLAY 'PREMIUM CALCULATION'.
+    STOP RUN."
+RECON.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/RECON.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. RECON.
+PROCEDURE DIVISION.
+    DISPLAY 'RECONCILIATION PROCESS'.
+    STOP RUN."
+TRANSREC.cpy,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/TRANSREC.cpy,CPY,"01 TRANS-RECORD.
+   05 TXN-ID PIC X(12).
+   05 TXN-AMOUNT PIC 9(8)V99."
+WAREHS.cbl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/WAREHS.cbl,CBL,"IDENTIFICATION DIVISION.
+PROGRAM-ID. WAREHS.
+PROCEDURE DIVISION.
+    DISPLAY 'WAREHOUSE VALIDATION'.
+    STOP RUN."
+YEARCLOSE.jcl,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/YEARCLOSE.jcl,JCL,"//YEARCLOSE JOB (FIN),'YEAR CLOSE'
+//STEP01 EXEC PGM=RECON
+//STEP02 EXEC PGM=CLAIMPAY"
+modernization_summary.csv,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/modernization_summary.csv,CSV,"file_name,readiness_score,risk_level
+CUSTOMER.cbl,50,Medium"
+risk_matrix.csv,/Volumes/workspace/default/codegenome/CodeGenome_Enhanced_Mainframe_Files/risk_matrix.csv,CSV,"application,risk_factor,severity
+PAYROLL,DB2 Dependency,High"

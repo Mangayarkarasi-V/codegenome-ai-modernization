@@ -1,0 +1,6 @@
+alert_type,severity,file_name,message
+HIGH_MODERNIZATION_RISK,CRITICAL,JOB001.jcl,JOB001.jcl requires phased modernization planning.
+HIGH_MODERNIZATION_RISK,CRITICAL,PAYROLL.cbl,PAYROLL.cbl requires phased modernization planning.
+CRITICAL_DB2_OPERATION,HIGH,CUSTOMER.cbl,CUSTOMER.cbl performs critical DB2 UPDATE operations.
+CRITICAL_DB2_OPERATION,HIGH,FUNDSXFER.cbl,FUNDSXFER.cbl performs critical DB2 UPDATE operations.
+CRITICAL_DB2_OPERATION,HIGH,PAYROLL.cbl,PAYROLL.cbl performs critical DB2 UPDATE operations.

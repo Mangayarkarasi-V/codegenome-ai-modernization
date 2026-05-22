@@ -1,0 +1,47 @@
+file_name,file_type,rule_category,business_rule,confidence,modernization_recommendation
+ACCOUNT.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+ACCTOPEN.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+AUTHCTRL.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+BANKREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+CLAIMPAY.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+CLAIMREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+CLAIMS.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+CLAIMS_HISTORY.sql,SQL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+CUSTOMER.cbl,CBL,Customer Master Data,Reads or updates customer master details.,High,Map CUSTOMER_MASTER to customer domain data model.
+CUSTOMER.cbl,CBL,Customer Audit,Calls customer audit process for customer risk tracking.,Medium,Review downstream audit dependency before API decomposition.
+CUSTOMER.cbl,CBL,DB2 Data Processing,Performs database read/write operations as part of batch or transaction processing.,Medium,Include this asset in DB2 lineage and data migration assessment.
+CUSTOMER_DB2.sql,SQL,Customer Master Data,Reads or updates customer master details.,High,Map CUSTOMER_MASTER to customer domain data model.
+CUSTOMER_MIGRATION.sql,SQL,Customer Master Data,Reads or updates customer master details.,High,Map CUSTOMER_MASTER to customer domain data model.
+CUSTREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+DAILYBATCH.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+EMPREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+ERRHANDL.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+FRAUDCHK.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+FUNDSXFER.cbl,CBL,DB2 Data Processing,Performs database read/write operations as part of batch or transaction processing.,Medium,Include this asset in DB2 lineage and data migration assessment.
+INTCALC.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+JOB001.jcl,JCL,DB2 Data Processing,Performs database read/write operations as part of batch or transaction processing.,Medium,Include this asset in DB2 lineage and data migration assessment.
+JOB001.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+MONTHEND.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+MONTHEND_RECON.sql,SQL,DB2 Data Processing,Performs database read/write operations as part of batch or transaction processing.,Medium,Include this asset in DB2 lineage and data migration assessment.
+NIGHTLY.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+ORDPROC.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+PATIENT.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+PAYJOB.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+PAYMENT_AUDIT.sql,SQL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+PAYREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+PAYROLL.cbl,CBL,Payroll,Processes employee salary information for payroll calculation.,High,Convert payroll logic into reusable payroll service.
+PAYROLL.cbl,CBL,Payroll Tax,"Employees with salary greater than 50,000 are assigned a higher tax amount.",High,Externalize tax threshold into configurable rule table.
+PAYROLL.cbl,CBL,Payroll Calculation,Calculates employee net salary by subtracting tax amount from salary.,High,Expose net salary calculation as API or rules engine service.
+PAYROLL.cbl,CBL,Employee Master Data,Reads or updates employee master payroll details.,High,Map EMP_MASTER dependency into employee domain data model.
+PAYROLL.cbl,CBL,Audit,Creates payroll audit records for tracking payroll processing.,High,Preserve audit trail in target cloud platform.
+PAYROLL.cbl,CBL,DB2 Data Processing,Performs database read/write operations as part of batch or transaction processing.,Medium,Include this asset in DB2 lineage and data migration assessment.
+PAYROLL_DB2.sql,SQL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+POLICY.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+POLRENEW.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+PREMIUM.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+RECON.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+TRANSREC.cpy,CPY,Shared Data Structure,Defines reusable record layout or shared data structure.,High,Convert copybook layout into canonical schema or data contract.
+WAREHS.cbl,CBL,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+YEARCLOSE.jcl,JCL,Batch Orchestration,"Controls batch job execution, program sequencing, and dataset movement.",High,Convert JCL flow into cloud-native workflow orchestration.
+modernization_summary.csv,CSV,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.
+risk_matrix.csv,CSV,Legacy Processing,Legacy asset used for mainframe batch processing or supporting application logic.,Low,Review manually for modernization scope.

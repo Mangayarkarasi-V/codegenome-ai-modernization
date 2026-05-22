@@ -1,0 +1,39 @@
+file_name,file_type,line_count,readiness_score,risk_level,modernization_priority,api_candidate,risk_factors,recommendation
+ACCOUNT.cbl,CBL,3,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+ACCTOPEN.cbl,CBL,7,85,Low,Low,YES,External program dependency,Good candidate for API enablement or direct cloud modernization.
+AUTHCTRL.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+BANKREC.cpy,CPY,3,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+CLAIMPAY.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+CLAIMREC.cpy,CPY,3,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+CLAIMS.cbl,CBL,3,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+CLAIMS_HISTORY.sql,SQL,4,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+CUSTOMER.cbl,CBL,58,50,Medium,Medium,NO,"External program dependency, DB2 or SQL dependency, Database write operation","Requires dependency, DB2, and batch flow review before modernization."
+CUSTOMER_DB2.sql,SQL,1,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+CUSTOMER_MIGRATION.sql,SQL,4,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+CUSTREC.cpy,CPY,2,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+DAILYBATCH.jcl,JCL,1,80,Low,Low,NO,Batch orchestration dependency,Good candidate for API enablement or direct cloud modernization.
+EMPREC.cpy,CPY,18,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+ERRHANDL.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+FRAUDCHK.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+FUNDSXFER.cbl,CBL,9,50,Medium,Medium,NO,"External program dependency, DB2 or SQL dependency, Database write operation","Requires dependency, DB2, and batch flow review before modernization."
+INTCALC.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+JOB001.jcl,JCL,36,45,High,High,NO,"Database write operation, Batch orchestration dependency, JCL execution flow dependency, SORT utility dependency","Needs detailed impact analysis, phased modernization, and regression validation."
+MONTHEND.jcl,JCL,3,70,Medium,Medium,NO,"Batch orchestration dependency, JCL execution flow dependency","Requires dependency, DB2, and batch flow review before modernization."
+MONTHEND_RECON.sql,SQL,1,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+NIGHTLY.jcl,JCL,4,70,Medium,Medium,NO,"Batch orchestration dependency, JCL execution flow dependency","Requires dependency, DB2, and batch flow review before modernization."
+ORDPROC.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+PATIENT.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+PAYJOB.jcl,JCL,1,80,Low,Low,NO,Batch orchestration dependency,Good candidate for API enablement or direct cloud modernization.
+PAYMENT_AUDIT.sql,SQL,4,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+PAYREC.cpy,CPY,2,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+PAYROLL.cbl,CBL,78,40,High,High,NO,"External program dependency, Copybook dependency, DB2 or SQL dependency, Database write operation","Needs detailed impact analysis, phased modernization, and regression validation."
+PAYROLL_DB2.sql,SQL,1,80,Low,Low,NO,DB2 or SQL dependency,Good candidate for API enablement or direct cloud modernization.
+POLICY.cbl,CBL,3,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+POLRENEW.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+PREMIUM.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+RECON.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+TRANSREC.cpy,CPY,3,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+WAREHS.cbl,CBL,5,100,Low,Low,YES,None,Good candidate for API enablement or direct cloud modernization.
+YEARCLOSE.jcl,JCL,3,70,Medium,Medium,NO,"Batch orchestration dependency, JCL execution flow dependency","Requires dependency, DB2, and batch flow review before modernization."
+modernization_summary.csv,CSV,2,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
+risk_matrix.csv,CSV,2,100,Low,Low,NO,None,Good candidate for API enablement or direct cloud modernization.
