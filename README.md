@@ -1,4 +1,4 @@
-# 🚀 CodeGenome AI Modernization Intelligence Hub
+# ⚙️ CodeGenome AI Modernization Intelligence Hub
 
 AI-Powered Enterprise Mainframe Modernization Platform built on Databricks Lakehouse, Streamlit, and GenAI capabilities.
 
