@@ -16,14 +16,14 @@ CodeGenome AI helps enterprises accelerate legacy modernization initiatives by a
 
 The platform provides:
 
-✅ Dependency Discovery  
-✅ DB2 Lineage Intelligence  
-✅ JCL Batch Flow Analysis  
-✅ Business Rule Extraction  
-✅ AI Modernization Readiness Scoring  
-✅ Risk Assessment & Governance Alerts  
-✅ Interactive Executive Dashboards  
-✅ Conversational GenAI Assistant  
+Dependency Discovery  
+DB2 Lineage Intelligence  
+JCL Batch Flow Analysis  
+Business Rule Extraction  
+AI Modernization Readiness Scoring  
+Risk Assessment & Governance Alerts  
+Interactive Executive Dashboards  
+Conversational GenAI Assistant  
 
 ---
 
