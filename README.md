@@ -1,172 +1,219 @@
-# CodeGenome AI Modernization
+# 🚀 CodeGenome AI Modernization Intelligence Hub
 
-AI-powered enterprise modernization accelerator built using Databricks Lakehouse, Delta Lake, SQL, Python, and AI workflows for COBOL, JCL, DB2, and legacy system modernization analysis.
-
----
-
-# Databricks Hackathon 2026
-
-### Building Intelligent Apps with Data + AI
-
-CodeGenome AI Modernization is an intelligent AI-driven platform designed to accelerate enterprise legacy modernization using Databricks Lakehouse capabilities.
-
-The solution enables organizations to analyze, document, assess, and modernize mainframe applications through AI-powered dependency analysis, business rule extraction, risk scoring, and modernization intelligence workflows.
+AI-Powered Enterprise Mainframe Modernization Platform built on Databricks Lakehouse, Streamlit, and GenAI capabilities.
 
 ---
 
-# Project Objectives
+# 📌 Overview
 
-- Analyze COBOL applications
-- Detect DB2 dependencies
-- Visualize JCL workflows
-- Extract business rules
-- Generate modernization readiness scores
-- Identify modernization risks
-- Enable AI-powered legacy documentation intelligence
+CodeGenome AI helps enterprises accelerate legacy modernization initiatives by automatically analyzing mainframe assets such as:
+
+- COBOL Programs
+- JCL Workflows
+- DB2 SQL
+- Copybooks
+- CSV / Metadata Files
+
+The platform provides:
+
+✅ Dependency Discovery  
+✅ DB2 Lineage Intelligence  
+✅ JCL Batch Flow Analysis  
+✅ Business Rule Extraction  
+✅ AI Modernization Readiness Scoring  
+✅ Risk Assessment & Governance Alerts  
+✅ Interactive Executive Dashboards  
+✅ Conversational GenAI Assistant  
 
 ---
 
-# Key Features
+# 🏗️ Solution Architecture
 
-## Mainframe Dependency Analysis
+## Mainframe Legacy Assets
+COBOL | JCL | DB2 SQL | COPYBOOKS | CSV FILES
 
-- COBOL dependency mapping
-- Copybook analysis
-- DB2 lineage tracking
-- Program relationship detection
+⬇️
 
----
+## Databricks Lakehouse Platform
+- Unity Catalog
+- Delta Tables
+- Databricks SQL
+- Serverless Compute
+- Databricks Apps
+
+⬇️
 
 ## AI Metadata Extraction Engine
+- Dependency Parsing
+- DB2 Lineage Extraction
+- JCL Flow Analysis
+- Dataset Mapping
+- Business Rule Identification
 
-- AI-based metadata parsing
-- Dependency extraction
-- Business rule identification
-- Legacy asset classification
-
----
+⬇️
 
 ## Modernization Intelligence Layer
+- Readiness Scoring
+- Risk Classification
+- Impact Analysis
+- API / Cloud Migration Recommendation
 
-- Readiness scoring
-- Risk classification
-- Impact analysis
-- Migration recommendations
+⬇️
 
----
-
-## Visualization Dashboard
-
-Interactive Databricks SQL Dashboard including:
-
-- Risk Level Count
-- Readiness Score Table
-- DB2 Lineage
-- Business Rule Summary
-- JCL Flow Visualization
-- Modernization Risk Summary
+## Executive AI Intelligence Hub
+- Interactive Dashboards
+- AI Risk Alerts
+- Streamlit UI
+- Conversational AI Assistant
 
 ---
 
-## AI Chat Assistant
+# ✨ Key Features
 
-Supports natural language queries such as:
+## 📊 Executive Dashboard
+- Enterprise modernization overview
+- Risk distribution analytics
+- Modernization readiness insights
+- API migration candidate analysis
 
-- Which program updates EMP_MASTER?
-- Show modernization risk
-- Explain payroll logic
-- Show JCL job flow
-- Display DB2 lineage
-- Generate business rule summary
+## 🔥 AI Risk Assessment
+- High-risk program identification
+- Dependency-heavy application detection
+- Governance risk alerts
+- Critical DB2 operation analysis
+
+## 🗄️ DB2 Lineage Intelligence
+- CRUD operation tracking
+- DB2 dependency mapping
+- Database access analysis
+- Impact assessment
+
+## ⚙️ JCL Orchestration Analysis
+- Batch workflow visualization
+- Execution sequence analysis
+- JCL complexity identification
+- Operational intelligence
+
+## 🤖 Conversational GenAI Assistant
+Example questions:
+- Which applications are high risk?
+- Show DB2 lineage.
+- Which programs are cloud migration candidates?
+- Generate modernization summary.
+- Which JCL jobs are most complex?
 
 ---
 
-# Architecture
+# 📈 Business Impact
+
+CodeGenome AI significantly reduces manual modernization assessment effort by automating enterprise legacy analysis.
+
+## Benefits
+- Faster cloud migration readiness
+- Reduced manual documentation effort
+- Improved impact analysis accuracy
+- Accelerated modernization planning
+- AI-assisted legacy knowledge extraction
+- Better governance visibility
+- Reduced operational modernization risk
+
+---
+
+# 🧠 AI Capabilities
+
+The platform leverages GenAI-powered intelligence for:
+
+- Dependency discovery
+- Business logic understanding
+- Functional rule extraction
+- Risk identification
+- Modernization recommendations
+- Executive reporting
+
+---
+
+# 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Data Platform | Databricks Lakehouse |
+| Processing | Python, Pandas |
+| Visualization | Plotly, Databricks Dashboards |
+| UI | Streamlit |
+| AI Layer | Genie AI / GenAI |
+| Storage | Delta Tables |
+| Governance | Unity Catalog |
+
+---
+
+# 📂 Repository Structure
 
 ```text
-+---------------------------------------------------+
-|            Mainframe Legacy Assets                |
-|      COBOL | JCL | DB2 | COPYBOOK Files           |
-+------------------------+--------------------------+
-                         |
-                         v
-+---------------------------------------------------+
-|               Databricks Lakehouse                |
-|         Unity Catalog + Delta Lake Storage        |
-+------------------------+--------------------------+
-                         |
-                         v
-+---------------------------------------------------+
-|        AI Metadata Extraction Engine              |
-|  Dependency Parsing | DB2 Lineage | JCL Analysis  |
-+------------------------+--------------------------+
-                         |
-                         v
-+---------------------------------------------------+
-|          Modernization Intelligence Layer         |
-|  Business Rules | Risk Scoring | Impact Analysis  |
-+------------------------+--------------------------+
-                         |
-                         v
-+---------------------------------------------------+
-|              Visualization & AI Layer             |
-| Dashboard | Dependency Graph | AI Chat Assistant  |
-+---------------------------------------------------+
+codegenome-ai-modernization/
+│
+├── app.py
+├── requirements.txt
+├── reports/
+├── dashboard/
+├── screenshots/
+├── notebooks/
+└── README.md
+```
 
-Technologies Used
-Databricks Lakehouse
-Delta Lake
-Unity Catalog
-Databricks SQL
-Python
-Pandas
-SQL
-AI/ML Workflows
-Data Visualization
+---
 
-Repository Structure
-architecture/
-dashboards/
-data/
-docs/
-notebooks/
-reports/
-screenshots/
-sql/
-README.md
+# ⚙️ Streamlit App
 
-Dashboard Capabilities
-The dashboard provides:
+The application includes:
 
-Modernization readiness insights
-High-risk program identification
-Dependency visualization
-DB2 lineage analysis
-Business rule extraction
-AI-driven modernization assessment
+Interactive Navigation  
+KPI Metrics  
+Modernization Dashboards  
+Risk Visualization  
+DB2 Lineage Analytics  
+JCL Orchestration Insights  
+AI Risk Alert Center  
+Conversational AI Assistant  
 
-Future Enhancements
-GenAI-powered code conversion
-Automated documentation generation
-Interactive dependency graph
-Agentic AI modernization assistant
-Cloud migration accelerator
-API enablement recommendations
-Enterprise modernization analytics
-Business Value
+---
 
-CodeGenome AI Modernization helps enterprises:
+# 📸 UI Preview
 
-Reduce legacy modernization effort
-Improve migration planning
-Accelerate documentation analysis
-Detect modernization risks early
-Improve operational visibility
-Enable AI-assisted transformation
+## CodeGenome AI Modernization Intelligence Hub
+- Executive modernization analytics
+- AI-driven governance intelligence
+- Enterprise-grade dashboarding
+- Interactive modernization insights
 
-Author
-Mangayarkarasi V
-DXC Technology
+---
 
-Databricks Hackathon 2026
-Building Intelligent Apps with Data + AI
+# 🔮 Future Enhancements
+
+- Real-time Unity Catalog integration
+- Live COBOL file upload analysis
+- LLM-powered modernization recommendations
+- Dependency graph visualization
+- Sankey flow diagrams
+- Automated migration blueprint generation
+- Multi-agent modernization orchestration
+
+---
+
+# 👨‍💻 Developed For
+
+Enterprise Legacy Modernization & AI Transformation Initiatives
+
+Built using:
+- Databricks Apps
+- Databricks SQL
+- Streamlit
+- GenAI Modernization Intelligence
+
+---
+
+# 📬 Contact
+
+CodeGenome AI Modernization Intelligence Hub  
+AI-Powered Enterprise Mainframe Modernization Platform
+
+---
