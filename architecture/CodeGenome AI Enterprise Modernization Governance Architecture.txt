@@ -1,0 +1,74 @@
++------------------------------------------------------------------+
+|                    MAINFRAME LEGACY ASSETS                       |
+|------------------------------------------------------------------|
+| COBOL Programs | JCL Jobs | DB2 SQL | COPYBOOKS | CSV Metadata   |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|                  DATABRICKS LAKEHOUSE PLATFORM                   |
+|------------------------------------------------------------------|
+| File Upload | Unity Catalog | Delta Lake | Delta Tables          |
+| Databricks SQL | Serverless Compute | Databricks Apps           |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|              AI-POWERED METADATA EXTRACTION ENGINE               |
+|------------------------------------------------------------------|
+| Dependency Parsing                                               |
+| DB2 CRUD Lineage Extraction                                      |
+| JCL Batch Flow Analysis                                          |
+| Dataset Mapping                                                  |
+| Business Rule Extraction                                         |
+| Program Relationship Discovery                                   |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|                MODERNIZATION INTELLIGENCE LAYER                  |
+|------------------------------------------------------------------|
+| Readiness Scoring                                                |
+| Risk Classification                                              |
+| Impact Analysis                                                  |
+| API / Cloud Migration Recommendation                             |
+| AI Modernization Recommendations                                 |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|                    AI RISK ALERT ENGINE                          |
+|------------------------------------------------------------------|
+| High-Risk Program Alerts                                         |
+| Critical DB2 Operation Alerts                                    |
+| Dependency Complexity Alerts                                     |
+| JCL Orchestration Risk Alerts                                    |
+| Migration Blocker Alerts                                         |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|              ENTERPRISE GOVERNANCE NOTIFICATION LAYER            |
+|------------------------------------------------------------------|
+| Zabbix Connector | Power Automate Workflow | Teams Notification  |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|              CODEGENOME AI INTELLIGENCE HUB                      |
+|------------------------------------------------------------------|
+| Streamlit App | Databricks Dashboard | Genie AI Assistant       |
+| Executive KPIs | Risk Analytics | DB2 Lineage | JCL Insights     |
+| Teams Governance Alerts | Conversational Modernization Q&A       |
++------------------------------------------------------------------+
+                                |
+                                v
++------------------------------------------------------------------+
+|                    BUSINESS OUTCOMES                             |
+|------------------------------------------------------------------|
+| Faster Modernization Planning                                    |
+| Reduced Legacy Assessment Effort                                 |
+| Improved Impact Analysis                                         |
+| Real-Time Governance Visibility                                  |
+| AI-Driven Cloud/API Migration Decisions                          |
++------------------------------------------------------------------+
